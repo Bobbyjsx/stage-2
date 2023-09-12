@@ -1,7 +1,7 @@
 "use client"
-import { useApiCache } from '../../hooks/useApiCache';
+import { useApiCache } from '../hooks/useApiCache';
 import Loading from "@/app/loading";
-import MovieCard from "../../components/common/MovieCard";
+import MovieCard from "../components/common/MovieCard";
 
 type Props = {
     seeFull:boolean
@@ -61,4 +61,4 @@ const Movies = ({seeFull = true}: Props) => {
   );
 }
 
-export default Movies
+export default Movies;

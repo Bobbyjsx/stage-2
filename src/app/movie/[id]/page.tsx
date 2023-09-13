@@ -33,7 +33,7 @@ const Page = ({ params }: { params: { id: string } }) => {
 				<SideBar id={params?.id} />
 			</div>
 
-			<div className="w-full sm:grid grid-rows-2 sm:p-10 sm:h-[95vh] h-screen sm:py-0 py-5">
+			<div className="w-full sm:grid grid-rows-2 sm:p-10 sm:h-[95vh] h-screen sm:py-0 py-5 px-2">
 				<div className="relative inset-0 overflow-hidden aspect-auto  sm:w-auto w-full flex justify-center items-center mt-1 sm:mt-3">
 					<Image
 						alt={title || ""}
@@ -133,10 +133,10 @@ const Page = ({ params }: { params: { id: string } }) => {
 						</p>
 						<p
 							data-testid="movie-overview"
-							className="text-md w-full flex flex-wrap sm:px-0 px-5 ">
+							className="text-md w-full flex flex-wrap sm:px-0 ">
 							{description}
 						</p>
-						<p className="text-gray-700 sm:text-lg text-md space-x-2 sm:space-x-3 sm:px-0 px-5">
+						<p className="text-gray-700 sm:text-lg text-md space-x-2 sm:space-x-3 sm:px-0">
 							Production company(s):{" "}
 							{movieDetails?.production_companies.map(
 								(comp: {
@@ -154,7 +154,7 @@ const Page = ({ params }: { params: { id: string } }) => {
 								}
 							)}
 						</p>
-						<p className="text-gray-700 sm:text-lg text-md space-x-2 sm:space-x-3 sm:px-0 px-5">
+						<p className="text-gray-700 sm:text-lg text-md space-x-2 sm:space-x-3 sm:px-0 ">
 							Production countries:{" "}
 							{movieDetails?.production_countries.map(
 								(comp: { name: string }) => {
@@ -168,7 +168,7 @@ const Page = ({ params }: { params: { id: string } }) => {
 								}
 							)}
 						</p>
-						<p className="text-gray-700 sm:text-lg text-md space-x-2 sm:space-x-3 sm:px-0 px-5">
+						<p className="text-gray-700 sm:text-lg text-md space-x-2 sm:space-x-3 sm:px-0 ">
 							Spoken language(s):{" "}
 							{movieDetails?.spoken_languages.map(
 								(comp: { english_name: string }) => {

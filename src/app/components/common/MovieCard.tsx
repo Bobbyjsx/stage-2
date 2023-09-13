@@ -29,7 +29,6 @@ const MovieCard = ({ movieDetails }: Props) => {
 
 	const { isFavorite, toggleFavorite } = useIsFavorite();
 	const handleToggle = () => {
-		// e.preventDefault();
 		toggleFavorite(id);
 	};
 	return (

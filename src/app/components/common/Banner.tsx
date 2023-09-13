@@ -92,7 +92,7 @@ export const Banner = () => {
 							href={`/movie/${movieDetails?.imdb_id}`}
 							className="bg-rose-700 py-[6px] px-4 text-white flex items-center justify-center w-[169px] h-[36px]">
 							<Image
-								src="/assets/play.svg"
+								src="/assets/Play.svg"
 								width={1000}
 								height={1000}
 								className="w-5 h-5"

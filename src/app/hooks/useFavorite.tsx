@@ -18,28 +18,17 @@ export const useIsFavorite = () => {
 
 	// Toggle favorite status
 	const toggleFavorite = (id: number) => {
-		const updatedIds = [...favoriteIds]; // Create a copy of the current favorite IDs
-
-		// Check if the provided ID is already in the favorite list
-		const isAlreadyFavorite = updatedIds.includes(id);
-
-		if (isAlreadyFavorite) {
+		if (isFavorite(id)) {
 			// Remove the ID from the favorites list
-			const index = updatedIds.indexOf(id);
-			if (index !== -1) {
-				updatedIds.splice(index, 1);
-			}
+			const updatedIds = favoriteIds.filter(
+				(favoriteId) => favoriteId !== id
+			);
+			setFavoriteIds(updatedIds);
 		} else {
-			// Check if the maximum limit of 4 favorites is reached
-			if (updatedIds.length >= 4) {
-				updatedIds.pop(); // Remove the last ID to make space for the new one
-			}
-			updatedIds.push(id); // Add the new ID to the favorites list
+			// Add the ID to the favorites list
+			setFavoriteIds([...favoriteIds, id]);
 		}
-
-		setFavoriteIds(updatedIds); // Update the state with the updated IDs
 	};
-
 
 	// Store favorite IDs in localStorage whenever it changes
 	useEffect(() => {

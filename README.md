@@ -76,4 +76,3 @@ You can run the project using the following yarn scripts:
 
 - **Acknowledgments**: Special thanks to the TMDB API for providing movie data.
 
-```

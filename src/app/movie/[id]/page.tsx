@@ -136,7 +136,7 @@ const Page = ({ params }: { params: { id: string } }) => {
 							className="text-md w-full flex flex-wrap sm:px-0 ">
 							{description}
 						</p>
-						<div className="flex flex-wrap text-gray-700 sm:text-lg text-md space-x-2 sm:space-x-3 sm:px-0">
+						<div className="flex flex-wrap text-gray-700 sm:text-lg text-md space-x-2 sm:space-x-3 sm:px-0 w-[60%]">
 							<p className=" flex flex-wrap">
 								Production company(s):{" "}
 							</p>
@@ -148,17 +148,17 @@ const Page = ({ params }: { params: { id: string } }) => {
 										name: string;
 									}) => {
 										return (
-											<span
+											<p
 												className="text-rose-700 text-xs sm:text-lg"
 												key={comp.id}>
 												{comp.name},
-											</span>
+											</p>
 										);
 									}
 								)}
 							</div>
 						</div>
-						<div className="flex flex-wrap text-gray-700 sm:text-lg text-md space-x-2 sm:space-x-3 sm:px-0 w-full">
+						<div className="flex flex-wrap text-gray-700 sm:text-lg text-md space-x-2 sm:space-x-3 sm:px-0 w-[60%]">
 							<p className=" ">
 								Production countries:{" "}
 							</p>
@@ -166,32 +166,32 @@ const Page = ({ params }: { params: { id: string } }) => {
 								{movieDetails?.production_countries.map(
 									(comp: { name: string }) => {
 										return (
-											<span
+											<p
 												className="text-rose-700 text-xs sm:text-lg"
 												key={comp.name}>
 												{comp.name},
-											</span>
+											</p>
 										);
 									}
 								)}
 							</div>
 						</div>
 
-						<div className="flex flex-wrap text-gray-700 sm:text-lg text-md space-x-2 sm:space-x-3 sm:px-0 w-full">
+						<div className="flex flex-wrap text-gray-700 sm:text-lg text-md space-x-2 sm:space-x-3 sm:px-0 w-[60%]">
 							<p className=" ">Spoken language(s): </p>
-							<div className="flex flex-row flex-wrap space-x-2">
+							<div className="flex flex-row flex-wrap space-x-2 ">
 								{movieDetails?.spoken_languages.map(
 									(comp: {
 										english_name: string;
 									}) => {
 										return (
-											<span
+											<p
 												className="text-rose-700 text-xs sm:text-lg"
 												key={
 													comp.english_name
 												}>
 												{comp.english_name},
-											</span>
+											</p>
 										);
 									}
 								)}

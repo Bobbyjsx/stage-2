@@ -1,6 +1,6 @@
 "use client";
 import { Banner } from "./components/common/Banner";
-import Movies from "./movie/page";
+import Movies from "./movie/Movies";
 import Link from "next/link";
 
 export default function Home() {

@@ -38,7 +38,7 @@ const Search = () => {
 						<div
 							className="w-full mx-auto"
 							key={tile.id}>
-							<MovieCard movieDetails={tile} />
+							<MovieCard movieDetails={tile}  />
 						</div>
 					);
 				})}

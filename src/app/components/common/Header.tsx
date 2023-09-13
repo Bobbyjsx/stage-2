@@ -34,9 +34,9 @@ const Header = () => {
 			})}>
 			<div
 				className={classNames({
-					"flex justify-around items-center mx-auto absolute top-0 left-0 w-full  z-10 bg-white/1 blend text-white backdrop-blur-sm":
+					"flex justify-around items-center mx-auto absolute top-0 left-0 w-full  z-10 bg-white/1 blend text-white backdrop-blur-sm ":
 						isActive("/"),
-					"flex justify-around items-center mx-auto absolute top-0 left-0 w-full  z-10 bg-rose-900/40 blend text-white backdrop-blur-sm  bg-slate-500- ":
+					"flex justify-around items-center mx-auto absolute top-0 left-0 w-full  z-10 bg-rose-900/40 blend text-white backdrop-blur-sm  bg-slate-500-  ":
 						!isActive("/"),
 				})}>
 				<Link

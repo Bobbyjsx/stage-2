@@ -115,7 +115,7 @@ const Page = ({ params }: { params: { id: string } }) => {
 								</p>
 							</div>
 						</div>
-						<p className="font-normal space-x-3 flex sm:hidden justify-center items-center mx-auto w-full">
+						<p className="font-normal space-x-3 flex sm:hidden justify-center items-center mx-auto w-full flex-wrap">
 							{movieDetails?.genres.map(
 								(genre: {
 									id: number;
@@ -136,52 +136,68 @@ const Page = ({ params }: { params: { id: string } }) => {
 							className="text-md w-full flex flex-wrap sm:px-0 ">
 							{description}
 						</p>
-						<p className="text-gray-700 sm:text-lg text-md space-x-2 sm:space-x-3 sm:px-0">
-							Production company(s):{" "}
-							{movieDetails?.production_companies.map(
-								(comp: {
-									id: number;
-									logo_path: string;
-									name: string;
-								}) => {
-									return (
-										<span
-											className="text-rose-700 text-xs sm:text-lg"
-											key={comp.id}>
-											{comp.name},
-										</span>
-									);
-								}
-							)}
-						</p>
-						<p className="text-gray-700 sm:text-lg text-md space-x-2 sm:space-x-3 sm:px-0 ">
-							Production countries:{" "}
-							{movieDetails?.production_countries.map(
-								(comp: { name: string }) => {
-									return (
-										<span
-											className="text-rose-700 text-xs sm:text-lg"
-											key={comp.name}>
-											{comp.name},
-										</span>
-									);
-								}
-							)}
-						</p>
-						<p className="text-gray-700 sm:text-lg text-md space-x-2 sm:space-x-3 sm:px-0 ">
-							Spoken language(s):{" "}
-							{movieDetails?.spoken_languages.map(
-								(comp: { english_name: string }) => {
-									return (
-										<span
-											className="text-rose-700 text-xs sm:text-lg"
-											key={comp.english_name}>
-											{comp.english_name},
-										</span>
-									);
-								}
-							)}
-						</p>
+						<div className="flex flex-wrap text-gray-700 sm:text-lg text-md space-x-2 sm:space-x-3 sm:px-0">
+							<p className=" flex flex-wrap">
+								Production company(s):{" "}
+							</p>
+							<div className="flex flex-row flex-wrap space-x-2">
+								{movieDetails?.production_companies.map(
+									(comp: {
+										id: number;
+										logo_path: string;
+										name: string;
+									}) => {
+										return (
+											<span
+												className="text-rose-700 text-xs sm:text-lg"
+												key={comp.id}>
+												{comp.name},
+											</span>
+										);
+									}
+								)}
+							</div>
+						</div>
+						<div className="flex flex-wrap text-gray-700 sm:text-lg text-md space-x-2 sm:space-x-3 sm:px-0 w-full">
+							<p className=" ">
+								Production countries:{" "}
+							</p>
+							<div className="flex flex-row flex-wrap space-x-2">
+								{movieDetails?.production_countries.map(
+									(comp: { name: string }) => {
+										return (
+											<span
+												className="text-rose-700 text-xs sm:text-lg"
+												key={comp.name}>
+												{comp.name},
+											</span>
+										);
+									}
+								)}
+							</div>
+						</div>
+
+						<div className="flex flex-wrap text-gray-700 sm:text-lg text-md space-x-2 sm:space-x-3 sm:px-0 w-full">
+							<p className=" ">Spoken language(s): </p>
+							<div className="flex flex-row flex-wrap space-x-2">
+								{movieDetails?.spoken_languages.map(
+									(comp: {
+										english_name: string;
+									}) => {
+										return (
+											<span
+												className="text-rose-700 text-xs sm:text-lg"
+												key={
+													comp.english_name
+												}>
+												{comp.english_name},
+											</span>
+										);
+									}
+								)}
+							</div>
+						</div>
+
 						<p className="bg-rose-800 text-white text-sm w-[253px] h-[55px] rounded-lg sm:flex items-center justify-center hidden">
 							Top rated movie #65
 						</p>

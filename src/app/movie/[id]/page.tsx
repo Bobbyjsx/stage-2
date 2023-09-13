@@ -136,7 +136,7 @@ const Page = ({ params }: { params: { id: string } }) => {
 							className="text-md w-full flex flex-wrap sm:px-0 ">
 							{description}
 						</p>
-						<div className="flex flex-wrap text-gray-700 sm:text-lg text-md space-x-2 sm:space-x-3 sm:px-0 w-[60%]">
+						<div className="flex flex-wrap text-gray-700 sm:text-lg text-md space-x-2 sm:space-x-3 sm:px-0 w-[80%]">
 							<p className=" flex flex-wrap">
 								Production company(s):{" "}
 							</p>
@@ -158,7 +158,7 @@ const Page = ({ params }: { params: { id: string } }) => {
 								)}
 							</div>
 						</div>
-						<div className="flex flex-wrap text-gray-700 sm:text-lg text-md space-x-2 sm:space-x-3 sm:px-0 w-[60%]">
+						<div className="flex flex-wrap text-gray-700 sm:text-lg text-md space-x-2 sm:space-x-3 sm:px-0 w-[80%]">
 							<p className=" ">
 								Production countries:{" "}
 							</p>
@@ -177,7 +177,7 @@ const Page = ({ params }: { params: { id: string } }) => {
 							</div>
 						</div>
 
-						<div className="flex flex-wrap text-gray-700 sm:text-lg text-md space-x-2 sm:space-x-3 sm:px-0 w-[60%]">
+						<div className="flex flex-wrap text-gray-700 sm:text-lg text-md space-x-2 sm:space-x-3 sm:px-0 w-[80%]">
 							<p className=" ">Spoken language(s): </p>
 							<div className="flex flex-row flex-wrap space-x-2 ">
 								{movieDetails?.spoken_languages.map(
@@ -247,7 +247,7 @@ const Page = ({ params }: { params: { id: string } }) => {
 						</div>
 						<p className="bg-rose-800 text-white text-sm w-[360px] h-[55px] rounded-lg flex items-center justify-center gap-5">
 							<Image
-								alt={"upvotes"}
+								alt={"tickets"}
 								className="w-5 h-5"
 								width={1000}
 								height={1000}
@@ -259,7 +259,7 @@ const Page = ({ params }: { params: { id: string } }) => {
 							href={"/movie"}
 							className="bg-rose-800 bg-opacity-25 text-black text-sm w-[360px] h-[55px] rounded-lg flex items-center justify-center gap-5">
 							<Image
-								alt={"upvotes"}
+								alt={"watch options"}
 								className="w-5 h-5"
 								width={1000}
 								height={1000}
@@ -272,7 +272,7 @@ const Page = ({ params }: { params: { id: string } }) => {
 							className="w-[360px] h-[229px]"
 							width={1000}
 							height={1000}
-							src={"/assets/Rec.png"}
+							src={"/assets/rec.png"}
 						/>
 					</div>
 				</div>
